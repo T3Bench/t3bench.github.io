@@ -43,7 +43,6 @@
 
 <body>
 
-
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
@@ -54,9 +53,9 @@
               Generation</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://github.com/bys0318">Yuze He*</a><sup>1</sup>,</span>
+                <a href="mailto:hyz22@mails.tsinghua.edu.cn">Yuze He*</a><sup>1</sup>,</span>
               <span class="author-block">
-                <a href="https://github.com/hyz317">Yushi Bai*</a><sup>1</sup>,</span>
+                <a href="mailto:bys22@mails.tsinghua.edu.cn">Yushi Bai*</a><sup>1</sup>,</span>
               <span class="author-block">
                 Matthieu Lin<sup>1</sup>,
               </span>
@@ -82,8 +81,7 @@
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block"><sup>1</sup>Tsinghua University</span>
-              <br>
+              <span class="author-block"><sup>1</sup>Tsinghua University</span>,
               <span class="author-block"><sup>2</sup>Shanghai Jiao Tong University</span>
             </div>
 
@@ -145,8 +143,10 @@
 
   <section class="hero teaser">
     <div class="container is-max-desktop">
-      <div class="hero-body">
-        <img src="static/images/A cactus with pink flowers.gif">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <img src="static/images/A cactus with pink flowers.gif">
+        </div>
       </div>
     </div>
   </section>
@@ -157,7 +157,7 @@
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Abstract</h2>
+          <h2 class="title is-3" style="color: #522265;">Abstract</h2>
           <div class="content has-text-justified">
             <p>
               Recent methods in text-to-3D leverage powerful pretrained diffusion models to optimize NeRF.
@@ -202,7 +202,7 @@
       <!-- Paper leaderboard. -->
       <div class="columns is-centered has-text-centered" id="leaderboard">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Leaderboard</h2>
+          <h2 class="title is-3" style="color: #522265;">Leaderboard</h2>
 
           <img src="static/images/overall_v3.png">
 
@@ -210,17 +210,17 @@
             <thead>
               <tr>
                 <th><span>#</span></th>
-                <th><span>Method</span></th>
+                <th style="text-align: left; padding-left: 8px;"><span>Method</span></th>
                 <th><span>Average</span></th>
-                <th><span>Single</span></th>
+                <th><span>Single Obj.</span></th>
                 <th><span>Single with Surr.</span></th>
-                <th><span>Multi</span></th>
+                <th><span>Multi Obj.</span></th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td style="color: darkgoldenrod;"><b>1</b></td>
-                <td class="lalign"><b>ProlificDreamer</b></td>
+                <td class="lalign"><b><a href="https://arxiv.org/abs/2305.16213">ProlificDreamer</a></b></td>
                 <td>43.3</td>
                 <td>49.4</td>
                 <td>44.8</td>
@@ -228,7 +228,7 @@
               </tr>
               <tr>
                 <td style="color: silver;"><b>2</b></td>
-                <td class="lalign"><b>Magic3D</b></td>
+                <td class="lalign"><b><a href="https://openaccess.thecvf.com/content/CVPR2023/html/Lin_Magic3D_High-Resolution_Text-to-3D_Content_Creation_CVPR_2023_paper.html">Magic3D</a></b></td>
                 <td>32.7</td>
                 <td>37.0</td>
                 <td>35.4</td>
@@ -236,7 +236,7 @@
               </tr>
               <tr>
                 <td style="color: rgb(153, 91, 32);"><b>3</b></td>
-                <td class="lalign"><b>LatentNeRF</b></td>
+                <td class="lalign"><b><a href="https://openaccess.thecvf.com/content/CVPR2023/html/Metzer_Latent-NeRF_for_Shape-Guided_Generation_of_3D_Shapes_and_Textures_CVPR_2023_paper.html">LatentNeRF</a></b></td>
                 <td>28.1</td>
                 <td>33.1</td>
                 <td>30.6</td>
@@ -244,7 +244,7 @@
               </tr>
               <tr>
                 <td><b>4</b></td>
-                <td class="lalign"><b>Fantasia3D</b></td>
+                <td class="lalign"><b><a href="https://arxiv.org/abs/2303.13873">Fantasia3D</a></b></td>
                 <td>24.0</td>
                 <td>26.4</td>
                 <td>27.0</td>
@@ -252,7 +252,7 @@
               </tr>
               <tr>
                 <td><b>5</b></td>
-                <td class="lalign"><b>DreamFusion</b></td>
+                <td class="lalign"><b><a href="https://arxiv.org/abs/2209.14988">DreamFusion</a></b></td>
                 <td>21.7</td>
                 <td>24.4</td>
                 <td>24.6</td>
@@ -260,7 +260,7 @@
               </tr>
               <tr>
                 <td><b>6</b></td>
-                <td class="lalign"><b>SJC</b></td>
+                <td class="lalign"><b><a href="https://openaccess.thecvf.com/content/CVPR2023/html/Wang_Score_Jacobian_Chaining_Lifting_Pretrained_2D_Diffusion_Models_for_3D_CVPR_2023_paper.html">SJC</a></b></td>
                 <td>18.7</td>
                 <td>24.7</td>
                 <td>19.8</td>
@@ -268,6 +268,15 @@
               </tr>
             </tbody>
           </table>
+
+          <!-- here is a quote -->
+          <div class="content has-text-justified">
+            <p>
+              <i>
+                *The scores above are the average of the two metrics (quality and alignment) in 0-100.
+              </i>
+            </p>
+          </div>
 
         </div>
       </div>
@@ -283,29 +292,34 @@
       <!-- Paper gallery. -->
       <div class="columns is-centered has-text-centered" id="gallery">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Gallery</h2>
+          <h2 class="title is-3" style="color: #522265;">Gallery</h2>
 
           <h2 class="title is-5">Single-Object Set</h2>
-          <img src="static/images/A cactus with pink flowers.gif">
-          <img src="static/images/An antique gold pocket watch.gif">
-          <img src="static/images/A leather-bound book with gold details.gif">
-          <img src="static/images/A castle-shaped sandcastle.gif">
-          <img src="static/images/A sparkling crystal chandelier.gif">
+          <div style="background-color: rgb(224, 224, 224);">
+            <img src="static/images/A cactus with pink flowers.gif">
+            <img src="static/images/An antique gold pocket watch.gif">
+            <img src="static/images/A leather-bound book with gold details.gif">
+            <img src="static/images/A castle-shaped sandcastle.gif">
+            <img src="static/images/A sparkling crystal chandelier.gif">
+          </div>
 
           <h2 class="title is-5" style="margin-top: 40px;">Single-Object-with-Surroundings Set</h2>
-          <img src="static/images/A pair of blue jeans hanging on a clothesline.gif">
-          <img src="static/images/A red rose in a crystal vase.gif">
-          <img src="static/images/A rainbow over a waterfall.gif">
-          <img src="static/images/A red barn in a green field.gif">
-          <img src="static/images/A green cactus in a clay pot.gif">
+          <div style="background-color: rgb(224, 224, 224);">
+            <img src="static/images/A pair of blue jeans hanging on a clothesline.gif">
+            <img src="static/images/A red rose in a crystal vase.gif">
+            <img src="static/images/A rainbow over a waterfall.gif">
+            <img src="static/images/A red barn in a green field.gif">
+            <img src="static/images/A green cactus in a clay pot.gif">
+          </div>
 
           <h2 class="title is-5" style="margin-top: 40px;">Multi-Object Set</h2>
-          <img src="static/images/A footballer is kicking a soccer ball.gif">
-          <img src="static/images/A black cat sleeps peacefully beside a carved pumpkin.gif">
-          <img src="static/images/A baby is reaching for a teddy bear on the bed.gif">
-          <img src="static/images/A drummer is beating the drumsticks on a drum.gif">
-          <img src="static/images/A man is holding an umbrella against rain.gif">
-
+          <div style="background-color: rgb(224, 224, 224);">
+            <img src="static/images/A footballer is kicking a soccer ball.gif">
+            <img src="static/images/A black cat sleeps peacefully beside a carved pumpkin.gif">
+            <img src="static/images/A baby is reaching for a teddy bear on the bed.gif">
+            <img src="static/images/A drummer is beating the drumsticks on a drum.gif">
+            <img src="static/images/A man is holding an umbrella against rain.gif">
+          </div>
         </div>
       </div>
       <!--/ Paper gallery. -->
