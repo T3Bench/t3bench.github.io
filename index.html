@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="Somehow Description">
-  <meta name="keywords" content="Somehow Keywords">
+  <meta name="description" content="T3Bench: Benchmarking Current Progress in Text-to-3D Generation">
+  <meta name="keywords" content="Text-to-3D NeRF DreamFusion">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>WOW!</title>
   <link href="./static/ico/logo.ico" rel="icon" type="image/x-ico" />
@@ -23,16 +23,15 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/table.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -41,81 +40,288 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
+
 <body>
 
 
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <img src="./static/images/logo.png" alt="Logo" width="150px">
-          <h1 class="title is-1 publication-title">WOW: There is somehow a title 114514</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://github.com/bys0318">Yuze He</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://github.com/hyz317">Yushi Bai</a><sup>1</sup>,</span>
-            <span class="author-block">
-              Matthieu Lin<sup>1</sup>,
-            </span>
-            <span class="author-block">
-              Wang Zhao<sup>1</sup>,
-            </span>
-            <span class="author-block">
-              Yubin Hu<sup>1</sup>,
-            </span>
-            <span class="author-block">
-              Jenny Sheng<sup>1</sup>,
-            </span>
-            <br>
-            <span class="author-block">
-              Ran Yi<sup>2</sup>,
-            </span>
-            <span class="author-block">
-              Juanzi Li<sup>1</sup>,
-            </span>
-            <span class="author-block">
-              Yong-Jin Liu<sup>1</sup>
-            </span>
-          </div>
-
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Tsinghua University</span>
-            <br>
-            <span class="author-block"><sup>2</sup>Shanghai Jiao Tong University</span>
-          </div>
-
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
           <div class="column has-text-centered">
-            <div class="publication-links">
-              <span class="link-block">
-                <a href="#"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
+            <img src="./static/images/logobig.png" alt="Logo" width="500px">
+            <h1 class="title is-1 publication-title">T<sup>3</sup>Bench: Benchmarking Current Progress in Text-to-3D
+              Generation</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://github.com/bys0318">Yuze He*</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://github.com/hyz317">Yushi Bai*</a><sup>1</sup>,</span>
+              <span class="author-block">
+                Matthieu Lin<sup>1</sup>,
               </span>
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="#"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
-                  </a>
+              <span class="author-block">
+                Wang Zhao<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Yubin Hu<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Jenny Sheng<sup>1</sup>,
+              </span>
+              <br>
+              <span class="author-block">
+                Ran Yi<sup>2</sup>,
+              </span>
+              <span class="author-block">
+                Juanzi Li<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Yong-Jin Liu<sup>1</sup>
               </span>
             </div>
 
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Tsinghua University</span>
+              <br>
+              <span class="author-block"><sup>2</sup>Shanghai Jiao Tong University</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="#" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Leaderboard. -->
+                <span class="link-block">
+                  <a href="#leaderboard" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-flag"></i>
+                    </span>
+                    <span>Leaderboard</span>
+                  </a>
+                </span>
+                <!-- Gallery. -->
+                <span class="link-block">
+                  <a href="#gallery" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-paint-brush"></i>
+                    </span>
+                    <span>Gallery</span>
+                  </a>
+                </span>
+                <!-- BibTeX. -->
+                <span class="link-block">
+                  <a href="#BibTeX" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-code"></i>
+                    </span>
+                    <span>BibTeX</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <img src="static/images/A cactus with pink flowers.gif">
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Recent methods in text-to-3D leverage powerful pretrained diffusion models to optimize NeRF.
+              Notably, these methods are able to produce high-quality 3D scenes without training on 3D data.
+            </p>
+            <p>
+              Due to the open-ended nature of the task, most studies evaluate their results with subjective case studies
+              and user experiments, thereby presenting a challenge in quantitatively addressing the question: <b>How has
+                current progress in Text-to-3D gone so far?</b>
+            </p>
+            <p>
+              In this paper, we introduce <b>T<sup>3</sup>Bench</b>, the first comprehensive text-to-3D benchmark
+              containing diverse text prompts of three increasing complexity levels that are specially designed for 3D
+              generation.
+              To assess both the subjective quality and the text alignment, we propose two automatic metrics based on
+              multi-view images produced by the 3D contents.
+              The quality metric combines multi-view text-image scores and regional convolution to detect quality and
+              view inconsistency.
+              The alignment metric uses multi-view captioning and Large Language Model (LLM) evaluation to measure
+              text-3D consistency.
+              Both metrics closely correlate with different dimensions of human judgments, providing a paradigm for
+              efficiently evaluating text-to-3D models.
+            </p>
+            <p>
+              The benchmarking results reveal performance differences among six prevalent text-to-3D methods.
+              Our analysis further highlights the common struggles for current methods on generating surroundings and
+              multi-object scenes, as well as the bottleneck of leveraging 2D guidance for 3D generation.
+            </p>
+            <img src="static/images/pipeline_v2.png">
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <!-- Paper leaderboard. -->
+      <div class="columns is-centered has-text-centered" id="leaderboard">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Leaderboard</h2>
+
+          <img src="static/images/overall_v3.png">
+
+          <table id="keywords" cellspacing="0" cellpadding="0">
+            <thead>
+              <tr>
+                <th><span>#</span></th>
+                <th><span>Method</span></th>
+                <th><span>Average</span></th>
+                <th><span>Single</span></th>
+                <th><span>Single with Surr.</span></th>
+                <th><span>Multi</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="color: darkgoldenrod;"><b>1</b></td>
+                <td class="lalign"><b>ProlificDreamer</b></td>
+                <td>43.3</td>
+                <td>49.4</td>
+                <td>44.8</td>
+                <td>35.8</td>
+              </tr>
+              <tr>
+                <td style="color: silver;"><b>2</b></td>
+                <td class="lalign"><b>Magic3D</b></td>
+                <td>32.7</td>
+                <td>37.0</td>
+                <td>35.4</td>
+                <td>25.7</td>
+              </tr>
+              <tr>
+                <td style="color: rgb(153, 91, 32);"><b>3</b></td>
+                <td class="lalign"><b>LatentNeRF</b></td>
+                <td>28.1</td>
+                <td>33.1</td>
+                <td>30.6</td>
+                <td>20.6</td>
+              </tr>
+              <tr>
+                <td><b>4</b></td>
+                <td class="lalign"><b>Fantasia3D</b></td>
+                <td>24.0</td>
+                <td>26.4</td>
+                <td>27.0</td>
+                <td>18.5</td>
+              </tr>
+              <tr>
+                <td><b>5</b></td>
+                <td class="lalign"><b>DreamFusion</b></td>
+                <td>21.7</td>
+                <td>24.4</td>
+                <td>24.6</td>
+                <td>16.1</td>
+              </tr>
+              <tr>
+                <td><b>6</b></td>
+                <td class="lalign"><b>SJC</b></td>
+                <td>18.7</td>
+                <td>24.7</td>
+                <td>19.8</td>
+                <td>11.7</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+      <!--/ Paper leaderboard. -->
+
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+
+      <!-- Paper gallery. -->
+      <div class="columns is-centered has-text-centered" id="gallery">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Gallery</h2>
+
+          <h2 class="title is-5">Single-Object Set</h2>
+          <img src="static/images/A cactus with pink flowers.gif">
+          <img src="static/images/An antique gold pocket watch.gif">
+          <img src="static/images/A leather-bound book with gold details.gif">
+          <img src="static/images/A castle-shaped sandcastle.gif">
+          <img src="static/images/A sparkling crystal chandelier.gif">
+
+          <h2 class="title is-5" style="margin-top: 40px;">Single-Object-with-Surroundings Set</h2>
+          <img src="static/images/A pair of blue jeans hanging on a clothesline.gif">
+          <img src="static/images/A red rose in a crystal vase.gif">
+          <img src="static/images/A rainbow over a waterfall.gif">
+          <img src="static/images/A red barn in a green field.gif">
+          <img src="static/images/A green cactus in a clay pot.gif">
+
+          <h2 class="title is-5" style="margin-top: 40px;">Multi-Object Set</h2>
+          <img src="static/images/A footballer is kicking a soccer ball.gif">
+          <img src="static/images/A black cat sleeps peacefully beside a carved pumpkin.gif">
+          <img src="static/images/A baby is reaching for a teddy bear on the bed.gif">
+          <img src="static/images/A drummer is beating the drumsticks on a drum.gif">
+          <img src="static/images/A man is holding an umbrella against rain.gif">
+
+        </div>
+      </div>
+      <!--/ Paper gallery. -->
+
+    </div>
+  </section>
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>There is somehow a BibTeX 114514</code></pre>
+    </div>
+  </section>
 
 
 </body>
+
 </html>
